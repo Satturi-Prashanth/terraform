@@ -43,3 +43,29 @@ resource "aws_internet_gateway" "igw" {
     Name = "Clahan-IGW"
   }
 }
+
+# Create a Security Group within the VPC 
+resource "aws_security_group" "example" {
+  name = "example-loadbalancer-sg"
+  description = "Security Group for the LoadBalancer"
+  vpc_id = aws_vpc.clahan_vpc.id
+  tags = {
+    Name = "Clahan-SG"
+  }
+
+  ingress {
+    description = "Allow Inbound Traffic on Port 80"
+    from_port = 80
+    to_port = 80 
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    description= "Allow outbound traffic on all ports"
+    from_port = 0
+    to_port = 0 
+    protocol = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
