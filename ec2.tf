@@ -8,3 +8,14 @@ resource "aws_instance" "web" {
     }
   
 }
+
+resource "aws_instance" "App" {
+    ami = "ami-07ebc46e9d014b560"
+    instance_type = "t2.small"
+    key_name = "roman-keypair"
+    monitoring = true
+    tags = {
+        Name = "App-server"
+    }
+  
+}
