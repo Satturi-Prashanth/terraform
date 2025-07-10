@@ -19,3 +19,14 @@ resource "aws_instance" "App" {
     }
   
 }
+
+resource "aws_instance" "Data" {
+    ami = "ami-07ebc46e9d014b560"
+    instance_type = "t2.medium"
+    key_name = "roman-keypair"
+    monitoring = true
+    tags = {
+        Name = "Data-server"
+    }
+  
+}
