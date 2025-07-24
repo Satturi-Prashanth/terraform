@@ -20,5 +20,5 @@ variable "subnet_2_cidr" {
 
 variable "subnet_2_az" {
   description = "CIDR Block for Subnet1"
-  default = "ap-northeast-1b"
+  default = "ap-northeast-1c"
 }
