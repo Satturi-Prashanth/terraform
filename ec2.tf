@@ -10,9 +10,9 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_instance" "App" {
-    ami = "ami-07ebc46e9d014b560"
+    ami = "ami-0bc8f29a8fc3184aa"
     instance_type = "t2.small"
-    key_name = "roman-keypair"
+    key_name = "sadashiva"
     monitoring = true
     tags = {
         Name = "App-server"
@@ -21,9 +21,9 @@ resource "aws_instance" "App" {
 }
 
 resource "aws_instance" "Data" {
-    ami = "ami-07ebc46e9d014b560"
+    ami = "ami-0bc8f29a8fc3184aa"
     instance_type = "t2.medium"
-    key_name = "roman-keypair"
+    key_name = "sadashiva"
     monitoring = true
     tags = {
         Name = "Data-server"
