@@ -36,6 +36,19 @@ resource "aws_subnet" "subnet_2" {
   }
 }
 
+resource "aws_subnet" "subnet_3" {
+  vpc_id = aws_vpc.clahan_vpc.id
+  cidr_block = var.subnet_3_cidr
+  availability_zone = var.subnet_3_az
+  map_public_ip_on_launch = false
+  tags = {
+    Name = "Clahan-Subnet-Private-2"
+  }
+}
+
+
+
+
 # Create Internete Gateway 
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.clahan_vpc.id
