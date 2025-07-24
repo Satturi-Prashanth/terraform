@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "nameebia-bucket"
+    bucket         = "nameebia"
     key            = "env/dev/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-northeast-1"
     dynamodb_table = "terraform-lock-table"
   }
 }
