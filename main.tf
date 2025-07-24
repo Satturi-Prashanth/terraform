@@ -46,6 +46,17 @@ resource "aws_subnet" "subnet_3" {
   }
 }
 
+resource "aws_subnet" "subnet_4" {
+  vpc_id = aws_vpc.clahan_vpc.id
+  cidr_block = var.subnet_4_cidr
+  availability_zone = var.subnet_4_az
+  map_public_ip_on_launch = false
+  tags = {
+    Name = "Clahan-Subnet-Private-4"
+  }
+}
+
+
 
 
 

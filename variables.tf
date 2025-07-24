@@ -33,6 +33,19 @@ variable "subnet_3_az" {
   default = "ap-northeast-1d"
 }
 
+variable "subnet_4_cidr" {
+  description = "CIDR Block for the Subnet4"
+  default = "10.0.4.0/24"
+}
+
+variable "subnet_4_az" {
+  description = "availability zone for the Subnet3"
+  default = "ap-northeast-1d"
+}
+
+
+
+
 
 
 
