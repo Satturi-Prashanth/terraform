@@ -30,6 +30,18 @@ resource "aws_instance" "Data" {
     }
   
 }
+resource "aws_instance" "Data" {
+    ami = "ami-0bc8f29a8fc3184aa"
+    instance_type = "t2.medium"
+    key_name = "sadashiva"
+    monitoring = true
+    tags = {
+        Name = "maha-server"
+    }
+  
+}
+
+
 
 # Create a LoadBalancer 
 
