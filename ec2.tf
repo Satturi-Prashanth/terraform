@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
-    ami = "ami-07ebc46e9d014b560"
+    ami = "ami-0bc8f29a8fc3184aa"
     instance_type = "t2.medium"
-    key_name = "public-k8s"
+    key_name = "sadashiva"
     monitoring = true
     tags = {
         Name = "WebServer"
