@@ -30,9 +30,9 @@ resource "aws_instance" "Data" {
     }
   
 }
-resource "aws_instance" "Data" {
+resource "aws_instance" "maha" {
     ami = "ami-0bc8f29a8fc3184aa"
-    instance_type = "t2.medium"
+    instance_type = "t2.small"
     key_name = "sadashiva"
     monitoring = true
     tags = {
